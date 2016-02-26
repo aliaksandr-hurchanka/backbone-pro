@@ -23,24 +23,24 @@ object.trigger("alert", "событие");
 
 // ----------------------------------------------------------
 
-// var Sidebar = Backbone.Model.extend({
-//   promptColor: function() {
-//     var cssColor = prompt("Пожалуйста, введите CSS-цвет:");
-//     this.set({color: cssColor});
-//   }
-// });
+ var Sidebar = Backbone.Model.extend({
+   promptColor: function() {
+     var cssColor = prompt("Пожалуйста, введите CSS-цвет:");
+     this.set({color: cssColor});
+   }
+ });
 
-// window.sidebar = new Sidebar;
+ window.sidebar = new Sidebar;
 
-// sidebar.on('change:color', function(model, color) {
-//   $('#sidebar').css({background: color});
-// });
+ sidebar.on('change:color', function(model, color) {
+   $('#sidebar').css({background: color});
+ });
 
-// sidebar.set({color: 'white'});
+ sidebar.set({color: 'white'});
 
-// sidebar.promptColor();
+ sidebar.promptColor();
 
-// console.log(window)
+ console.log(window)
 
 // -----------------------------------------------------------
 
@@ -57,17 +57,17 @@ var Library = Backbone.Model.extend({
 
 // -------------------------------------------------------
 
-// var Person = function (  ) {
-//     this.name = config.name;
-//     this.age = config.age;
-//     this.job = config.job;
-// }
+ var Person = function (  ) {
+     this.name = config.name;
+     this.age = config.age;
+     this.job = config.job;
+ }
 
-// Person.prototype.walk = function () {
-//     return this.name + ' is walking';
-// }
+ Person.prototype.walk = function () {
+     return this.name + ' is walking';
+ }
 
-// var nick = new Person ({name: 'Nick', age: '24', job: 'Front-end developer'});
+ var nick = new Person ({name: 'Nick', age: '24', job: 'Front-end developer'});
 
 // -------------------------------------------------------
 
@@ -90,12 +90,12 @@ var Person = Backbone.Model.extend({
     }
 });
 
-// var person = new Person({'name':'Andrey', 'age':27});
-// console.log(person.name);
-// console.log(person.get('name'));
-// console.log(person.set('name', 'Alex'));
-// console.log(person.walk());
-// console.log(person.toJSON());
+ var person = new Person({'name':'Andrey', 'age':27});
+ console.log(person.name);
+ console.log(person.get('name'));
+ console.log(person.set('name', 'Alex'));
+ console.log(person.walk());
+ console.log(person.toJSON());
 
 // Валидация модели
 
@@ -114,36 +114,6 @@ personSecond.set('age', -25, {validate: true});
 // с новой версией, валидация по умолчанию включена только для .save
 // теперь событие которое срабатывает при валидации называется 'invalid'
 console.log(personSecond.toJSON());
-
-
-// ------------------------------------------------------------------------
-
-// View
-var PersonView = Backbone.View.extend({
-    initialize: function () {
-        console.log('Экземпляр класса создан!');
-    },
-    tagName: 'li',
-    render: function () {
-        console.log('Hello!');
-        // антипаттерн, так не рекомендуется, нужны шаблонизаторы
-        this.$el.html(this.model.get('name'));
-    },
-    className: 'person'
-});
-
-var person = new Person;
-var personView = new PersonView({model: person}); // сразу указывает какая модель привязана
-
-//var PersonView = new PersonView;
-
-//console.log(PersonView); // el улемент - каждых вид, 
-                         // в любой момент времени привязан к какому 
-                         // то элементу, по умолчанию это div
-
-console.log(personView);
-console.log(personView.render());
-console.log(personView.el);
 
 
 
