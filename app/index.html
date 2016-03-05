@@ -7,19 +7,39 @@
 </head>
 <body>
 
-    <script type="text/template" id="person-id">
-         <%= name %> ( <%= age %> ) - <%= job %>
+
+
+    <h1>My Theater</h1>
+    
+    
+    <div id="mainContainer"></div>
+    <input type="button" value="Add Item" id="butAddItem" />
+    <script type="text/template" id="tmplt-Movies">
+        <ul>
+        </ul>
     </script>
+    <script type="text/template" id="tmplt-Movie">
+        <div>*******************************************************</div>
+        <div><%= Id %> </div>
+        <div><%= Name %> </div>
+        <div><%= AverageRating %> </div>
+        <div><%= ReleaseYear %> </div>
+        <div><%= Url %> </div>
+        <div><%= Rating %> </div>
+    </script>
+
     <script src="js/underscore.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/backbone.js"></script>
+    <script src="js/data_json.js"></script>
 <!--    <script src="js/collection.js"></script>
     <script src="js/template_without_view.js"></script>
     <script src="js/model.js"></script>
     <script src="js/view.js"></script>
     <script src="js/template.js"></script>
     <script src="js/router.js"></script>
-    -->
     <script src="js/dynamicRouter.js"></script>
+-->
+
 </body>
 </html>
