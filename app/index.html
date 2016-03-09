@@ -7,12 +7,19 @@
 </head>
 <body>
 
+    <div>
+        <li><a href="/#/">Home</a></li>
+        <li><a href="/#/test">Test</a></li>
+    </div>
 
+    <div id="test-holder"></div>
+<script type="text/template" id="tpl">
+    <label>Task: </label>
+    <input type="text" id="task-desk" />
+    <input type="button" value="Add Task" id="btn" />
+</script>
 
-    <h1>My Theater</h1>
-    
-    
-    <div id="mainContainer"></div>
+<!--    <div id="mainContainer"></div>
     <input type="button" value="Add Item" id="butAddItem" />
     <script type="text/template" id="tmplt-Movies">
         <ul>
@@ -27,12 +34,13 @@
         <div><%= Url %> </div>
         <div><%= Rating %> </div>
     </script>
-
+-->
     <script src="js/underscore.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/backbone.js"></script>
-    <script src="js/data_json.js"></script>
-<!--    <script src="js/collection.js"></script>
+    <script src="js/router-ex.js"></script>
+<!--    <script src="js/data_json.js"></script>
+    <script src="js/collection.js"></script>
     <script src="js/template_without_view.js"></script>
     <script src="js/model.js"></script>
     <script src="js/view.js"></script>

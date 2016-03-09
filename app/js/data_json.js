@@ -1,3 +1,10 @@
+var Films = {
+    Views: {},
+    Models: {},
+    Templates: {},
+    Collections: {}
+}
+
 // Model
 Films.Models.Movie = Backbone.Model.extend({})
 Films.Collections.Movies = Backbone.Collection.extend({
